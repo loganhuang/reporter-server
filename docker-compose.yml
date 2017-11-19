@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  tomcat:
+    restart: always
+    image: tomcat
+    ports:
+    - 8899:8080
+    volumes:
+    - /tomcat/webapps:/usr/local/tomcat/webapps
+    - /tomcat/logs:/usr/local/tomcat/logs
